@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Norse';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Norse'), url('resources/Norse-Bold.otf') format('woff');
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1.6vw - 0.05vh;
+    font-family: 'Roboto', sans-serif;
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(251, 251, 242);
+}
+
+#image-section{
+    flex-basis: 40%;
+    height: 100%;
+    background-image: url(resources/sara-kallner-Jsj5iafTc-c-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+#image-section a{
+    color: white;
+}
+
+
+@media only screen and (max-width : 849px){
+    .parent{
+        flex-direction: column;
+    }
+}
+
+#aside-section{
+    flex-shrink: 30;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.1rem;
+}
+
+#aside-section > article{
+    font-weight: 600;
+    padding: 0 9vw 0 3vw;
+}
+
+#aside-section > section{
+    background-color: white;
+    padding: 1vw 9vw 3vw 3vw;
+    box-shadow: 0 4px 10px -7px black;
+}
+label{
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+form{
+    display: grid;
+    grid-template-areas: 'input1 input2''input3 input4''input5 input6';
+    gap: 30px;
+}
+input{
+    font-size: 1.1rem;
+    width: 80%;
+    height: 60%;
+    margin-top: 5px;
+    padding: 1% 3% 1%;
+    border: solid rgb(200, 200, 200) 1px;
+    border-radius: 5px;
+    outline: none;
+}
+input::placeholder{
+    opacity: 0.3;
+}
+input:hover{
+    box-shadow: 0 4px 10px -7px grey;
+}
+input:focus{
+    box-shadow: 0 5px 10px -7px black;
+}
+input:placeholder-shown{
+    border: solid grey 1px !important;
+}
+input:valid{
+    border: solid green 2px;
+}
+input:invalid{
+    border: solid red 2px;
+}
