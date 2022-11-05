@@ -1,12 +1,17 @@
 var check = function() {
     let psw = document.getElementById('password');
     let cnf_psw = document.getElementById('confirm_pswd');
-    if (psw.value == cnf_psw.value) {
-        document.getElementById('check').style.color = 'green';
-        document.getElementById('check').innerHTML = ' \u2713 Passwords match';
+    let checkForPassword = document.getElementById('check');
+    if ((psw.value != cnf_psw.value) && (cnf_psw.value != '')) {
+        checkForPassword.style.color = 'red';
+        checkForPassword.textContent = ' * Passwords don\'t match !!!';
+        document.querySelector('#submitBtn').disabled = 'disabled';
+    } else if ((psw.value === cnf_psw.value) && (cnf_psw.value != '')) {
+        checkForPassword.style.color = 'green';
+        checkForPassword.textContent = ' \u2713 Passwords match';
+        document.querySelector('#submitBtn').removeAttribute('disabled');
     } else {
-        document.getElementById('check').style.color = 'red';
-        document.getElementById('check').innerHTML = ' * Passwords don\'t match !!!';
+        checkForPassword.textContent = '';
     }
     
 }
