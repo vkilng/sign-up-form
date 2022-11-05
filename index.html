@@ -14,7 +14,7 @@
     <div class="parent">
         <section id="image-section">
             <div>
-                <img src="resources/odin-lined.png">
+                <img src="resources/odin-lined.png" height="100%">
                 <span style="font-family: Norse;">ODIN</span>
             </div>
             <footer>
@@ -28,8 +28,8 @@
                 <br>Sign up <span style="font-style: italic;">now</span> to get started.
                 <p>You <span style="font-style: italic;">know</span> you want to.</p>
             </article>
-            <section>
-                <h4>Let's do this!</h4>
+            <section id="form-section">
+                <p style="font-weight: 600;">Let's do this!</p>
                 <form action="#" method="post">
                     <div style="grid-area: input1;">
                         <label for="first_name">FIRST NAME</label><br>
@@ -52,9 +52,6 @@
                     </div>
                     <div style="grid-area: input5;">
                         <label for="password">PASSWORD
-                            <div style="font-size: 1em;">
-                                (Must contain at least one number, one uppercase letter,<br>one special character (!@$.^*) and at least 8 characters)
-                            </div>
                         </label><br>
                         <input type="text" name="password" id="password"
                         pattern="(?=.*\d)(?=.*[A-Z])(?=.*[!@$.^* ]).{8,20}" placeholder="atleast 8 characters"
@@ -70,6 +67,10 @@
                     </div>
                 </form>
                 <p id='chck'></p>
+            </section>
+            <section id="submit-section">
+                <p><button type="submit" id="submit">Create Account</button></p>
+                <p>Already have an account? <a href="#">Log In</a></p>
             </section>
         </section>
     </div>
