@@ -115,6 +115,10 @@ input:valid{
 input:invalid{
     border: solid red 2px;
 }
+#check{
+    font-size: 0.7rem;
+    padding: 1vh 0 0;
+}
 
 #submit-section{
     padding: 0 9vw 1vw 3vw;

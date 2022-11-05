@@ -30,7 +30,7 @@
             </article>
             <section id="form-section">
                 <p style="font-weight: 600;">Let's do this!</p>
-                <form action="#" method="post">
+                <form action="#" method="post" id="MyForm">
                     <div style="grid-area: input1;">
                         <label for="first_name">FIRST NAME</label><br>
                         <input type="text" name="first_name" required pattern="[a-zA-Z]{1,15}"
@@ -66,10 +66,10 @@
                         required  onkeyup="check()"/>
                     </div>
                 </form>
-                <p id='chck'></p>
+                <div id='check'></div>
             </section>
             <section id="submit-section">
-                <p><button type="submit" id="submit">Create Account</button></p>
+                <p><button type="submit" form="MyForm">Create Account</button></p>
                 <p>Already have an account? <a href="#">Log In</a></p>
             </section>
         </section>
