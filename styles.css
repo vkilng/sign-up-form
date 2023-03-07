@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+@font-face {
+  font-family: 'Norse';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Norse'), url('resources/Norse-Bold.otf') format('woff');
+}
+
 html,
 body {
   width: 100vw;
@@ -26,6 +33,14 @@ body {
   display: grid;
   align-items: center;
   color: white;
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+
+  html,
+  body {
+    height: auto;
+  }
 }
 
 .text-band {
@@ -154,16 +169,75 @@ input:invalid {
   color: rgb(130, 92, 57);
 }
 
+/* footer */
+footer {
+  background-color: #27272a;
+  color: white;
+  padding: 1vw 4vw;
+  gap: 0.8vw;
+  font-size: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+footer a {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  width: 2vw;
+  height: 2vw;
+}
+
+footer img:hover {
+  animation: wiggly 2s infinite;
+}
+
+@keyframes wiggly {
+  50% {
+    transform: rotate(360deg) scale(1.2);
+  }
+
+  100% {
+    transform: rotate(1080deg) scale(1);
+  }
+}
+
 @media screen and (max-width: 500px) {
   .wrapper {
     display: grid;
   }
+
   .image-section {
     width: 100%;
   }
+
+  .text-band {
+    font-size: 3rem;
+    gap: 4vw;
+  }
+
+  .text-band img {
+    transform: scale(1.5);
+  }
+
   .main-section {
     /* align-items: start; */
     grid-auto-rows: min-content;
     padding: 5vw 0;
+  }
+
+  footer {
+    position: relative;
+    top: 10vh;
   }
 }
