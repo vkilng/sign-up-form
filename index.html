@@ -1,77 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>sign-up-form</title>
 </head>
+
 <body>
-    <section id="image-section">
-        <div>
-            <img src="resources/odin-lined.png" height="100%">
-            <span style="font-family: Norse;">ODIN</span>
-        </div>
-        <footer>
-            Photo by <a href="https://unsplash.com/@sarakallner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sara Källner</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-        </footer>
-    </section>
-    <section id="aside-section">
-        <article>
-            This is not a real online service! You know you need something like
-            this in your life to help you realize your deepest dreams.
-            <br>Sign up <span style="font-style: italic;">now</span> to get started.
-            <p>You <span style="font-style: italic;">know</span> you want to.</p>
-        </article>
-        <section id="form-section">
-            <p style="font-weight: 600;">Let's do this!</p>
+    <div class="wrapper">
+        <section class="image-section">
+            <div class="text-band">
+                <img src="resources/odin-lined.png">
+                <div style="font-family: Norse;">ODIN</div>
+            </div>
+            <div class="attribution">
+                Photo by <a
+                    href="https://unsplash.com/@sarakallner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Sara
+                    Källner</a> on <a
+                    href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </div>
+        </section>
+        <section class="main-section">
+            <article>
+                This is not a real online service! You know you need something like
+                this in your life to help you realize your deepest dreams.
+                <br>Sign up <span style="font-style: italic;">now</span> to get started.
+                <p>You <span style="font-style: italic;">know</span> you want to.</p>
+            </article>
             <form action="#" method="post" id="MyForm">
-                <div style="grid-area: input1;">
+                <div style="grid-area: form-header;">Let's do this!</div>
+                <div style="grid-area: input1;" class='field'>
                     <label for="first_name">FIRST NAME</label><br>
-                    <input type="text" name="first_name" required pattern="[a-zA-Z]{1,15}"
-                    placeholder="John" maxlength="20"/>
+                    <input type="text" name="first_name" required pattern="[a-zA-Z]{1,15}" placeholder="John"
+                        maxlength="20" />
                 </div>
-                <div style="grid-area: input2;">
+                <div style="grid-area: input2;" class='field'>
                     <label for="last_name">LAST NAME</label><br>
-                    <input type="text" name="last_name" required pattern="[a-zA-Z ]{1,20}"
-                    placeholder="Elton"/>
+                    <input type="text" name="last_name" required pattern="[a-zA-Z ]{1,20}" placeholder="Elton" />
                 </div>
-                <div style="grid-area: input3;">
+                <div style="grid-area: input3;" class='field'>
                     <label for="email"> EMAIL</label><br>
-                    <input type="email" name="email" required placeholder="xyz@kmail.com"/>
+                    <input type="email" name="email" required placeholder="xyz@kmail.com" />
                 </div>
-                <div style="grid-area: input4;">
+                <div style="grid-area: input4;" class='field'>
                     <label for="phone_number">PHONE NUMBER</label><br>
-                    <input type="text" name="phone_number" required pattern="[0-9]{10}"
-                    maxlength="10" placeholder="10 digit number"/>
+                    <input type="text" name="phone_number" required pattern="[0-9]{10}" maxlength="10"
+                        placeholder="10 digit number" />
                 </div>
-                <div style="grid-area: input5;">
+                <div style="grid-area: input5;" class='field'>
                     <label for="password">PASSWORD
                     </label><br>
-                    <input type="text" name="password" id="password"
-                    pattern="(?=.*\d)(?=.*[A-Z])(?=.*[!@$.^* ]).{8,20}" placeholder="atleast 8 characters"
-                    title="Must contain at least one number, one uppercase letter, one special character (!@$.^*) and at least 8 characters"
-                    required  onkeyup="check()"/>
+                    <input type="text" name="password" id="password" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[!@$.^* ]).{8,20}"
+                        placeholder="atleast 8 characters"
+                        title="Must contain at least one number, one uppercase letter, one special character (!@$.^*) and at least 8 characters"
+                        required onkeyup="check()" />
                 </div>
-                <div style="grid-area: input6;">
+                <div style="grid-area: input6;" class='field'>
                     <label for="confirm_pswd">CONFIRM PASSWORD</label><br>
                     <input type="text" name="confirm_pswd" id="confirm_pswd"
-                    pattern="(?=.*\d)(?=.*[A-Z])(?=.*[!@$.^* ]).{8,20}" placeholder="atleast 8 characters"
-                    title="Must contain at least one number, one uppercase letter, one special character (!@$.^*) and at least 8 characters"
-                    required  onkeyup="check()"/>
+                        pattern="(?=.*\d)(?=.*[A-Z])(?=.*[!@$.^* ]).{8,20}" placeholder="atleast 8 characters"
+                        title="Must contain at least one number, one uppercase letter, one special character (!@$.^*) and at least 8 characters"
+                        required onkeyup="check()" />
                 </div>
+                <div class='check'></div>
             </form>
-            <div id='check'></div>
+            <div class="submit-section">
+                <p><button type="submit" form="MyForm">Create Account</button></p>
+                <div>Already have an account? <a href="#">Log In</a></div>
+            </div>
         </section>
-        <section id="submit-section">
-            <p><button type="submit" form="MyForm" id="submitBtn">Create Account</button></p>
-            <p>Already have an account? <a href="#">Log In</a></p>
-        </section>
-    </section>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
